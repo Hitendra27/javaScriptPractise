@@ -1,11 +1,17 @@
-// JavaScript Program to Check if An Array Contains a Specified Value
+// JavaScript Program to Remove Specific Item From an Array
 
-const array = ['you', 'will', 'learn', 'javascript'];
+function removeItemFromArray(array, n) {
+    const newArray = [];
 
-const hasValue = array.indexOf('javascript') !== -1;
-
-if(hasValue) {
-    console.log('Array contains a value.')
-} else {
-    console.log('Array does not contain a value.')
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] !== n) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
 }
+
+const result = removeItemFromArray([1, 2, 3, 4, 5], 2);
+
+console.log(result);
+
