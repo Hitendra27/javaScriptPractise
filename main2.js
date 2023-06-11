@@ -1,17 +1,15 @@
 // JavaScript Program to Remove Specific Item From an Array
 
-function removeItemFromArray(array, n) {
-    const newArray = [];
+const removeItemFromArray = (array, n) => {
+    const index = array.indexOf(n);
 
-    for(let i = 0; i < array.length; i++) {
-        if(array[i] !== n) {
-            newArray.push(array[i]);
-        }
+    if(index > -1) {
+        array.splice(index, 1);
     }
-    return newArray;
+    return array;
 }
 
-const result = removeItemFromArray([1, 2, 3, 4, 5], 2);
+const result = removeItemFromArray([1, 2, 3, 4, 2, 5], 2);
 
 console.log(result);
 
