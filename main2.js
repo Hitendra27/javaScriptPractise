@@ -1,15 +1,14 @@
-// JavaScript Program to Remove Specific Item From an Array
+// JavaScript Program to Insert Item in an Array
 
-const removeItemFromArray = (array, n) => {
-    const index = array.indexOf(n);
+function insertElement() {
+    let array = [1, 2, 3, 4, 5];
 
-    if(index > -1) {
-        array.splice(index, 1);
-    }
-    return array;
+    let index = 3;
+
+    let element = 8;
+
+    array.splice(index, 0, element);
+    console.log(array);
 }
 
-const result = removeItemFromArray([1, 2, 3, 4, 2, 5], 2);
-
-console.log(result);
-
+insertElement();
