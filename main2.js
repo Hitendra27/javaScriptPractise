@@ -1,14 +1,18 @@
 // JavaScript Program to Insert Item in an Array
 
-function insertElement() {
-    let array = [1, 2, 3, 4, 5];
+const insertOjbect = (arr, obj) => {
 
-    let index = 3;
+    arr.push(obj);
 
-    let element = 8;
+    console.log(arr);
 
-    array.splice(index, 0, element);
-    console.log(array);
 }
 
-insertElement();
+let array = [1, 2, 3];
+
+let object = {
+    x: 12,
+    y: 8
+};
+
+insertOjbect(array, object);
