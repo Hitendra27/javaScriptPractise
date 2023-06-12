@@ -2,7 +2,7 @@
 
 const insertOjbect = (arr, obj) => {
 
-    arr.push(obj);
+    arr = [...arr, object];
 
     console.log(arr);
 
