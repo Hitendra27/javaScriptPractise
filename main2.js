@@ -2,7 +2,7 @@
 
 function emptyArray(arr) {
 
-    arr = [];
+    arr.splice(0, arr.length);
 
     return arr;
 }
