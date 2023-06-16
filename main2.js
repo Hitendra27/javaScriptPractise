@@ -1,18 +1,17 @@
-// JavaScript Program to Insert Item in an Array
+// JavaScript Program to Check if An Object is An Array
 
-const insertOjbect = (arr, obj) => {
+function checkObject(arr) {
 
-    arr = [...arr, object];
+    const result = Array.isArray(arr);
 
-    console.log(arr);
-
+    if(result) {
+        console.log(`${arr} is an array.`)
+    }
+    else {
+        console.log(`${arr} is not an array.`)
+    }
 }
 
-let array = [1, 2, 3];
+const array = [1, 2, 3];
 
-let object = {
-    x: 12,
-    y: 8
-};
-
-insertOjbect(array, object);
+checkObject(array);
