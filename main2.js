@@ -2,7 +2,7 @@
 
 const addElement = (arr) => {
 
-   arr = [4, ...arr];
+   arr = [4].concat(arr);
 
     console.log(arr);
 
