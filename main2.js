@@ -1,15 +1,13 @@
-// JavaScript Program to Empty an Array
+// JavaScript Program to Add Element to Start of an Array
 
-function emptyArray(arr) {
+const addElement = (arr) => {
 
-    arr.length = 0;
+    arr.unshift(4);
 
-    return arr;
+    console.log(arr);
+
 }
 
 const array = [1, 2, 3];
-console.log(array);
 
-const result = emptyArray(array);
-console.log(result);
-
+addElement(array);
