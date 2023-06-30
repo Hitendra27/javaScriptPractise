@@ -2,7 +2,7 @@
 
 const addElement = (arr) => {
 
-   arr.splice(0, 0, 4);
+   arr = [4, ...arr];
 
     console.log(arr);
 
