@@ -1,12 +1,16 @@
-// JavaScript Program to Remove Duplicates From Array.
+// JavaScript Program to Merge Two Arrays and Remove Duplicate Items
 
-const getUnique = (arr) => {
+const getUniqueAfterMerge = (arr1, arr2) => {
 
-   let uniqueArr = [...new Set(arr)];
+    let arr = [...arr1, ...arr2];
+
+    let uniqueArr = [...new Set(arr)];
 
     console.log(uniqueArr);
+
 }
 
-const array = [1, 2, 3, 2, 4, 3, 5, 4];
+const array1 = [1, 2, 3];
+const array2 = [2, 3, 5];
 
-getUnique(array);
+getUniqueAfterMerge(array1, array2);
