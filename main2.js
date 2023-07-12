@@ -1,16 +1,34 @@
-// JavaScript Program to Merge Two Arrays and Remove Duplicate Items
+// JavaScript Program to Sort Array of Objects by Property Values
 
-const getUniqueAfterMerge = (arr1, arr2) => {
+function compareName(a, b) {
 
-    let arr = [...arr1, ...arr2];
+    const name1 = a.name.toUpperCase();
+    const name2 = b.name.toUpperCase();
 
-    let uniqueArr = [...new Set(arr)];
+    let comparison = 0;
 
-    console.log(uniqueArr);
+    if(name1 > name2) {
+        comparison = 1;
+    } else if (name1 < name2) {
+        comparison = -1;
+    }
+    return comparison;
 
 }
 
-const array1 = [1, 2, 3];
-const array2 = [2, 3, 5];
+const students = [
+    {
+        name: 'Sara',
+        age: 24
+    },
+    {
+        name: 'John',
+        age: 24
+    },
+    {
+        name: 'Jack',
+        age: 25
+    }
+];
 
-getUniqueAfterMerge(array1, array2);
+console.log(students.sort(compareName));
