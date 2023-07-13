@@ -1,25 +1,32 @@
-// JavaScript Program to Create Two Dimensional Array
+// JavaScript Program to Extract Given Property Values from Objects as Array
 
-function twoDimensionArray(a, b) {
-    let arr = [];
+function extractValue(arr, prop) {
 
-    for(let i = 0; i < a; i++) {
-        for(let j = 0; j < b; j++) {
-            arr[i] = [];
-        }
-    }
+   let extractedValue = [];
 
-    for(let i = 0; i < a; i++) {
-        for(let j = 0; j < b; j++ ) {
-            arr[i][j] = j;
-        }
+   for(let i = 0; i < arr.length; ++i) {
+    extractValue.push(arr[i][prop]);
 
-    }
-    return arr;
+   }
+
+    return extractedValue;
+
 }
 
-const x = 2;
-const y = 3;
+const objArray = [
+    {
+        a: 1,
+        b: 2
+    },
+    {
+        a: 4,
+        b: 5
+    },
+    {
+        a: 8,
+        b: 9
+    }
+];
 
-const result = twoDimensionArray(x, y);
+const result = extractValue(objArray, 'a');
 console.log(result);
