@@ -1,20 +1,25 @@
-// JavaScript Program to Sort Array of Objects by Property Values
+// JavaScript Program to Create Two Dimensional Array
 
-const compareAge = (a, b) => a.age - b.age;
+function twoDimensionArray(a, b) {
+    let arr = [];
 
-const students = [
-    {
-        name: 'Sara',
-        age: 22
-    },
-    {
-        name: 'John',
-        age: 24
-    },
-    {
-        name: 'Jack',
-        age: 25
+    for(let i = 0; i < a; i++) {
+        for(let j = 0; j < b; j++) {
+            arr[i] = [];
+        }
     }
-];
 
-console.log(students.sort(compareAge));
+    for(let i = 0; i < a; i++) {
+        for(let j = 0; j < b; j++ ) {
+            arr[i][j] = j;
+        }
+
+    }
+    return arr;
+}
+
+const x = 2;
+const y = 3;
+
+const result = twoDimensionArray(x, y);
+console.log(result);
