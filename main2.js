@@ -1,16 +1,29 @@
 // JavaScript Program to Compare Elements of Two Arrays
 
 function compareArrays(arr1, arr2) {
-  const result = JSON.stringify(arr1) == JSON.stringify(arr2);
-
-  if (result) {
-    console.log("The arrays have the same elements");
+  if (arr1.length != arr2.length) {
+    return false;
   } else {
-    console.log("The arrays have different elements");
+    let result = false;
+
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] != arr2[i]) {
+        return false;
+      } else {
+        result = true;
+      }
+    }
+    return result;
   }
 }
 
-const array1 = [1, 3, 5, 8];
+const array1 = [1, 9, 5, 8];
 const array2 = [1, 3, 5, 8];
 
-compareArrays(array1, array2);
+const result = compareArrays(array1, array2);
+
+if (result) {
+  console.log("The arrays have the same elements");
+} else {
+  console.log("The arrays have different elements");
+}
