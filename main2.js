@@ -1,32 +1,16 @@
-// JavaScript Program to Extract Given Property Values from Objects as Array
+// JavaScript Program to Compare Elements of Two Arrays
 
-function extractValue(arr, prop) {
+function compareArrays(arr1, arr2) {
+  const result = JSON.stringify(arr1) == JSON.stringify(arr2);
 
-   let extractedValue = [];
-
-   for(let i = 0; i < arr.length; ++i) {
-    extractValue.push(arr[i][prop]);
-
-   }
-
-    return extractedValue;
-
+  if (result) {
+    console.log("The arrays have the same elements");
+  } else {
+    console.log("The arrays have different elements");
+  }
 }
 
-const objArray = [
-    {
-        a: 1,
-        b: 2
-    },
-    {
-        a: 4,
-        b: 5
-    },
-    {
-        a: 8,
-        b: 9
-    }
-];
+const array1 = [1, 3, 5, 8];
+const array2 = [1, 3, 5, 8];
 
-const result = extractValue(objArray, 'a');
-console.log(result);
+compareArrays(array1, array2);
