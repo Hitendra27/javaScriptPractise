@@ -1,29 +1,14 @@
-// JavaScript Program to Compare Elements of Two Arrays
+// JavaScript Program to Get Random Item From an Array
 
-function compareArrays(arr1, arr2) {
-  if (arr1.length != arr2.length) {
-    return false;
-  } else {
-    let result = false;
+function getRandomItem(arr) {
+  const randomIndex = Math.floor(Math.random() * arr.length);
 
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] != arr2[i]) {
-        return false;
-      } else {
-        result = true;
-      }
-    }
-    return result;
-  }
+  const item = arr[randomIndex];
+
+  return item;
 }
 
-const array1 = [1, 9, 5, 8];
-const array2 = [1, 3, 5, 8];
+const array = [1, "hello", 5, 8];
 
-const result = compareArrays(array1, array2);
-
-if (result) {
-  console.log("The arrays have the same elements");
-} else {
-  console.log("The arrays have different elements");
-}
+const result = getRandomItem(array);
+console.log(result);
