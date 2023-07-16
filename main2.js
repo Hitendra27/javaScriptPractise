@@ -1,14 +1,21 @@
-// JavaScript Program to Get Random Item From an Array
+// JavaScript Program To Perform Intersection Between Two Arrays
 
-function getRandomItem(arr) {
-  const randomIndex = Math.floor(Math.random() * arr.length);
+function performIntersection(arr1, arr2) {
+  const setA = new Set(arr1);
+  const setB = new Set(arr2);
 
-  const item = arr[randomIndex];
+  let IntersectionResult = [];
 
-  return item;
+  for (let i of setB) {
+    if (setA.has(i)) {
+      IntersectionResult.push(i);
+    }
+  }
+  return IntersectionResult;
 }
 
-const array = [1, "hello", 5, 8];
+const array1 = [1, 2, 3, 5, 9];
+const array2 = [1, 3, 5, 8];
 
-const result = getRandomItem(array);
+const result = performIntersection(array1, array2);
 console.log(result);
