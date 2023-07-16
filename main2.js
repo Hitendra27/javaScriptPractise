@@ -1,9 +1,9 @@
 // JavaScript Program to Split Array into Smaller Chunks
 
 function splitIntoChuck(arr, chuck) {
-  for (i = 0; i < arr.length; i += chuck) {
+  while (arr.length > 0) {
     let tempArray;
-    tempArray = arr.slice(i, i + chuck);
+    tempArray = arr.splice(0, chuck);
     console.log(tempArray);
   }
 }
