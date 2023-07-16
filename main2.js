@@ -1,11 +1,13 @@
-// JavaScript Program To Perform Intersection Between Two Arrays
+// JavaScript Program to Split Array into Smaller Chunks
 
-const performIntersection = (arr1, arr2) => {
-  return arr1.filter((x) => arr2.indexOf(x) !== -1);
-};
+function splitIntoChuck(arr, chuck) {
+  for (i = 0; i < arr.length; i += chuck) {
+    let tempArray;
+    tempArray = arr.slice(i, i + chuck);
+    console.log(tempArray);
+  }
+}
 
-const array1 = [1, 2, 3, 5, 9];
-const array2 = [1, 3, 5, 8];
-
-const result = performIntersection(array1, array2);
-console.log(result);
+const array = [1, 2, 3, 4, 5, 6, 7, 8];
+const chuck = 2;
+splitIntoChuck(array, chuck);
