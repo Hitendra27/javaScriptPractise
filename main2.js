@@ -1,18 +1,8 @@
 // JavaScript Program To Perform Intersection Between Two Arrays
 
-function performIntersection(arr1, arr2) {
-  const setA = new Set(arr1);
-  const setB = new Set(arr2);
-
-  let IntersectionResult = [];
-
-  for (let i of setB) {
-    if (setA.has(i)) {
-      IntersectionResult.push(i);
-    }
-  }
-  return IntersectionResult;
-}
+const performIntersection = (arr1, arr2) => {
+  return arr1.filter((x) => arr2.indexOf(x) !== -1);
+};
 
 const array1 = [1, 2, 3, 5, 9];
 const array2 = [1, 3, 5, 8];
