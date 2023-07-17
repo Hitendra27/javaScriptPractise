@@ -1,7 +1,10 @@
 // JavaScript Program to Get File Extension
 
 const getFileExtension = (filename) => {
-  const extention = filename.split(".").pop();
+  const extention = filename.substring(
+    filename.lastIndexOf(".") + 1,
+    filename.length
+  );
   return extention;
 };
 
