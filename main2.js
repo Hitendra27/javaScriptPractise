@@ -1,13 +1,10 @@
-// JavaScript Program to Split Array into Smaller Chunks
+// JavaScript Program to Include a JS file in Another JS file
 
-function splitIntoChuck(arr, chuck) {
-  while (arr.length > 0) {
-    let tempArray;
-    tempArray = arr.splice(0, chuck);
-    console.log(tempArray);
-  }
-}
+import { message, number, multiplyNumber } from "./module";
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8];
-const chuck = 2;
-splitIntoChuck(array, chuck);
+console.log(message);
+
+console.log(number);
+
+console.log(multiplyNumber(4, 4));
+console.log(multiplyNumber(5, 5));
