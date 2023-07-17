@@ -1,10 +1,12 @@
-// JavaScript Program to Include a JS file in Another JS file
+// JavaScript Program to Get File Extension
 
-import { message, number, multiplyNumber } from "./module";
+const getFileExtension = (filename) => {
+  const extention = filename.split(".").pop();
+  return extention;
+};
 
-console.log(message);
+const result1 = getFileExtension("module.js");
+console.log(result1);
 
-console.log(number);
-
-console.log(multiplyNumber(4, 4));
-console.log(multiplyNumber(5, 5));
+const result2 = getFileExtension("module.txt");
+console.log(result2);
