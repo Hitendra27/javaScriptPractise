@@ -1,15 +1,16 @@
-// JavaScript Program to Get File Extension
+// JavaScript Program To Check If A Variable Is undefined or null
 
-const getFileExtension = (filename) => {
-  const extention = filename.substring(
-    filename.lastIndexOf(".") + 1,
-    filename.length
-  );
-  return extention;
+const checkVarible = (variable) => {
+  if (variable == null) {
+    console.log("The variable is undefined or null");
+  } else {
+    console.log("The variable is neither undefined nor null");
+  }
 };
 
-const result1 = getFileExtension("module.js");
-console.log(result1);
+let newVariable;
 
-const result2 = getFileExtension("module.txt");
-console.log(result2);
+checkVarible(5);
+checkVarible("hello");
+checkVarible(null);
+checkVarible(newVariable);
