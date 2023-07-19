@@ -1,9 +1,10 @@
 // JavaScript Program to Set a Default Parameter Value For a Function
+//  Using Previous Parameter in Another Parameter
 
-const sum = (x = 3, y = 5) => {
-  return x + y;
-};
+let calculate = (x = 15, y = x + 2) => x + y;
 
-console.log(sum(5, 15)); // 20
-console.log(sum(7)); //12
-console.log(sum()); //8
+const result1 = calculate(10);
+console.log(result1); // 22
+
+const result2 = calculate();
+console.log(result2); //32
