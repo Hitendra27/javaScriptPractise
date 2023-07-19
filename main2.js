@@ -1,16 +1,9 @@
-// JavaScript Program To Check If A Variable Is undefined or null
+// JavaScript Program to Set a Default Parameter Value For a Function
 
-const checkVarible = (variable) => {
-  if (typeof variable === "undefined" || variable === null) {
-    console.log("The variable is undefined or null");
-  } else {
-    console.log("The variable is neither undefined nor null");
-  }
+const sum = (x = 3, y = 5) => {
+  return x + y;
 };
 
-let newVariable;
-
-checkVarible(5);
-checkVarible("hello");
-checkVarible(null);
-checkVarible(newVariable);
+console.log(sum(5, 15)); // 20
+console.log(sum(7)); //12
+console.log(sum()); //8
