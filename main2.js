@@ -1,7 +1,7 @@
 // JavaScript Program To Check If A Variable Is undefined or null
 
 const checkVarible = (variable) => {
-  if (variable == null) {
+  if (typeof variable === "undefined" || variable === null) {
     console.log("The variable is undefined or null");
   } else {
     console.log("The variable is neither undefined nor null");
