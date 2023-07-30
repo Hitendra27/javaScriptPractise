@@ -1,10 +1,8 @@
-// JavaScript Program to Set a Default Parameter Value For a Function
-//  Using Previous Parameter in Another Parameter
+// Javascript Program to Generate a Random Number Between Two Numbers
 
-let calculate = (x = 15, y = x + 2) => x + y;
+const min = parseInt(prompt("Enter a min value: "));
+const max = parseInt(prompt("Enter a max value: "));
 
-const result1 = calculate(10);
-console.log(result1); // 22
+const a = Math.floor(Math.random() * (max - min + 1)) + min;
 
-const result2 = calculate();
-console.log(result2); //32
+console.log(`Random value between ${min} and ${max} is ${a}`);
