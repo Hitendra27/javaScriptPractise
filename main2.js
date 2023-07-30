@@ -1,8 +1,7 @@
-// Javascript Program to Generate a Random Number Between Two Numbers
+// JavaScript Program To Get The Current URL
 
-const min = parseInt(prompt("Enter a min value: "));
-const max = parseInt(prompt("Enter a max value: "));
+const url1 = window.location.href;
+const url2 = document.URL;
 
-const a = Math.floor(Math.random() * (max - min + 1)) + min;
-
-console.log(`Random value between ${min} and ${max} is ${a}`);
+console.log(url1);
+console.log(url2);
