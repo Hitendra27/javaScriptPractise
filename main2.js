@@ -1,17 +1,20 @@
-// JavaScript Program to Check If a Variable is of Function Type
+// JavaScript Program To Work With Constants
 
-function testVariable(variable) {
-  if (typeof variable === "function") {
-    console.log("The variable is of function type");
-  } else {
-    console.log("The variable is not of function type");
-  }
+const a = 5;
+console.log(a);
+
+{
+  const a = 50;
+  console.log(a);
 }
+console.log(a);
 
-const count = true;
-const x = () => {
-  console.log("hello");
-};
+const arr = ["work", "exercise", "eat"];
+console.log(arr);
 
-testVariable(count);
-testVariable(x);
+arr[3] = "hello";
+console.log(arr);
+
+// a = 8;
+
+// const x;
