@@ -1,20 +1,8 @@
-// JavaScript Program To Work With Constants
+// JavaScript Program to Pass Parameter to a setTimeout() Function
 
-const a = 5;
-console.log(a);
-
-{
-  const a = 50;
-  console.log(a);
+const greet = () => {
+  console.log('Hello world');
 }
-console.log(a);
 
-const arr = ["work", "exercise", "eat"];
-console.log(arr);
-
-arr[3] = "hello";
-console.log(arr);
-
-// a = 8;
-
-// const x;
+setTimeout(greet, 3000);
+console.log('This message is shown first');
