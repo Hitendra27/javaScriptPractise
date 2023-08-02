@@ -1,18 +1,22 @@
 // JavaScript Program to Perform Function Overloading
 
 function sum() {
-  if (arguments.length == 0) {
-    console.log("You have not passed any argument");
-  } else if (arguments.length == 1) {
-    console.log("Pass at least two arguments");
-  } else {
-    let result = 0;
-    let length = arguments.length;
+  switch (arguments.length) {
+    case 0:
+      console.log("You have not passed any argument");
+      break;
+    case 1:
+      console.log("Pass at least two arguments");
+      break;
+    default:
+      let result = 0;
+      let length = arguments.length;
 
-    for (i = 0; i < length; i++) {
-      result = result + arguments[i];
-    }
-    console.log(result);
+      for (i = 0; i < length; i++) {
+        result = result + arguments[i];
+      }
+      console.log(result);
+      break;
   }
 }
 
