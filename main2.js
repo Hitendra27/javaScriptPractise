@@ -1,22 +1,22 @@
-// JavaScript Program to Generate a Range of Numbers and Characters
+// JavaScript Program to Perform Function Overloading
 
-function* iterate(a, b) {
-  for (let i = a; i <= b; i += 1) {
-    yield i;
-  }
-}
-
-function range(a, b) {
-  if (typeof a === "string") {
-    let result = [...iterate(a.charCodeAt(), b.charCodeAt())].map((n) =>
-      String.fromCharCode(n)
-    );
-    console.log(result);
+function sum() {
+  if (arguments.length == 0) {
+    console.log("You have not passed any argument");
+  } else if (arguments.length == 1) {
+    console.log("Pass at least two arguments");
   } else {
-    let result = [...iterate(a, b)];
+    let result = 0;
+    let length = arguments.length;
+
+    for (i = 0; i < length; i++) {
+      result = result + arguments[i];
+    }
     console.log(result);
   }
 }
 
-range(1, 5);
-range("A", "G");
+sum();
+sum(5);
+sum(5, 9);
+sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
