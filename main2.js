@@ -1,26 +1,51 @@
-// JavaScript Program to Perform Function Overloading
+// JavaScript Program to Implement a Stack
 
-function sum() {
-  switch (arguments.length) {
-    case 0:
-      console.log("You have not passed any argument");
-      break;
-    case 1:
-      console.log("Pass at least two arguments");
-      break;
-    default:
-      let result = 0;
-      let length = arguments.length;
+class Stack {
+  constructor() {
+    this.items = [];
+  }
 
-      for (i = 0; i < length; i++) {
-        result = result + arguments[i];
-      }
-      console.log(result);
-      break;
+  add(element) {
+    return this.items.push(element);
+  }
+
+  remove() {
+    if (this.items.length > 0) {
+      return this.items.pop();
+    }
+  }
+
+  peek() {
+    return this.items[this.items.length - 1];
+  }
+
+  isEmpty() {
+    return this.items.length == 0;
+  }
+
+  size() {
+    return this.items.length;
+  }
+
+  clear() {
+    this.items = [];
   }
 }
 
-sum();
-sum(5);
-sum(5, 9);
-sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
+let stack = new Stack();
+stack.add(1);
+stack.add(2);
+stack.add(4);
+stack.add(8);
+
+stack.remove();
+console.log(stack.items);
+
+console.log(stack.peek());
+
+console.log(stack.isEmpty());
+
+console.log(stack.size());
+
+stack.clear();
+console.log(stack.items);
