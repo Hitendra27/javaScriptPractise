@@ -1,66 +1,19 @@
-// JavaScript Program to Implement a Queue
+// JavaScript Program to Check if a Number is Float or Integer
 
-class Queue {
-  constructor() {
-    this.items = {};
-    this.headIndex = 0;
-    this.tailIndex = 0;
-  }
-
-  enqueue(element) {
-    this.items[this.tailIndex] = element;
-    this.tailIndex++;
-  }
-
-  dequeue() {
-    let removedElement = this.items[this.headIndex];
-    delete this.items[this.headIndex];
-    this.headIndex++;
-    return removedElement;
-  }
-
-  peek() {
-    let peekElement = this.items[this.headIndex];
-    return peekElement;
-  }
-
-  size() {
-    return this.tailIndex - this.headIndex;
-  }
-
-  isEmpty() {
-    if (this.tailIndex - this.headIndex == 0) {
-      return true;
+function checkNumber(x) {
+  if (typeof x == "number" && !isNaN(x)) {
+    if (Number.isInteger(x)) {
+      console.log(`${x} is integer.`);
     } else {
-      return false;
+      console.log(`${x} is a float value.`);
     }
-  }
-
-  clear() {
-    this.items = {};
-    this.headIndex = 0;
-    this.tailIndex = 0;
+  } else {
+    console.log(`${x} is not a number`);
   }
 }
 
-let queue = new Queue();
-
-queue.enqueue(8);
-queue.enqueue(6);
-queue.enqueue(4);
-queue.enqueue(2);
-
-console.log("Queue after adding items: ");
-console.log(queue.items);
-
-queue.dequeue();
-
-console.log("Queue after deleting the first item:");
-console.log(queue.items);
-
-console.log("First item of the queue = " + queue.peek());
-
-queue.clear();
-
-console.log("After clearing the queue: ");
-console.log(queue.items);
+checkNumber("hello");
+checkNumber(44);
+checkNumber(3.4);
+checkNumber(-3.4);
+checkNumber(NaN);
