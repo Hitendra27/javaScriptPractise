@@ -1,51 +1,66 @@
-// JavaScript Program to Implement a Stack
+// JavaScript Program to Implement a Queue
 
-class Stack {
+class Queue {
   constructor() {
-    this.items = [];
+    this.items = {};
+    this.headIndex = 0;
+    this.tailIndex = 0;
   }
 
-  add(element) {
-    return this.items.push(element);
+  enqueue(element) {
+    this.items[this.tailIndex] = element;
+    this.tailIndex++;
   }
 
-  remove() {
-    if (this.items.length > 0) {
-      return this.items.pop();
-    }
+  dequeue() {
+    let removedElement = this.items[this.headIndex];
+    delete this.items[this.headIndex];
+    this.headIndex++;
+    return removedElement;
   }
 
   peek() {
-    return this.items[this.items.length - 1];
-  }
-
-  isEmpty() {
-    return this.items.length == 0;
+    let peekElement = this.items[this.headIndex];
+    return peekElement;
   }
 
   size() {
-    return this.items.length;
+    return this.tailIndex - this.headIndex;
+  }
+
+  isEmpty() {
+    if (this.tailIndex - this.headIndex == 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   clear() {
-    this.items = [];
+    this.items = {};
+    this.headIndex = 0;
+    this.tailIndex = 0;
   }
 }
 
-let stack = new Stack();
-stack.add(1);
-stack.add(2);
-stack.add(4);
-stack.add(8);
+let queue = new Queue();
 
-stack.remove();
-console.log(stack.items);
+queue.enqueue(8);
+queue.enqueue(6);
+queue.enqueue(4);
+queue.enqueue(2);
 
-console.log(stack.peek());
+console.log("Queue after adding items: ");
+console.log(queue.items);
 
-console.log(stack.isEmpty());
+queue.dequeue();
 
-console.log(stack.size());
+console.log("Queue after deleting the first item:");
+console.log(queue.items);
 
-stack.clear();
-console.log(stack.items);
+console.log("First item of the queue = " + queue.peek());
+
+queue.clear();
+
+console.log("After clearing the queue: ");
+console.log(queue.items);
