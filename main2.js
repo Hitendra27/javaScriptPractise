@@ -1,17 +1,15 @@
-// JavaScript Program to Check if a Number is Float or Integer
+//JavaScript Program to Pass a Function as Parameter
 
-function checkNumber(x) {
-  let regexPattern = /^-?[0-9]+$/;
-
-  let result = regexPattern.test(x);
-
-  if (result) {
-    console.log(`${x} is an integer.`);
-  } else {
-    console.log(`${x} is a float value.`);
-  }
+function greet() {
+  return "Hello";
 }
 
-checkNumber(44);
-checkNumber(3.4);
-checkNumber(-3.4);
+function name(user, func) {
+  const message = func();
+
+  console.log(`${message} ${user}`);
+}
+
+name("John", greet());
+name("Jack", greet());
+name("Sara", greet());
