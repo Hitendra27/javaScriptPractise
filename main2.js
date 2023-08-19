@@ -1,10 +1,7 @@
-// JavaScript Program to Get the Dimensions of an Image
+// JavaScript Program to Remove All Whitespaces From a Text
 
-const img = new Image();
+const string = "        Hello World          ";
 
-img.src = "//cdn.programiz.com/sites/tutorial2program/files/cover-artwork.png";
+const resutl = string.split(" ").join("");
 
-img.onload = function () {
-  console.log("width " + this.width);
-  console.log("height " + this.height);
-};
+console.log(resutl);
