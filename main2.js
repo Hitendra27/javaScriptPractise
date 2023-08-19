@@ -1,15 +1,10 @@
-//JavaScript Program to Pass a Function as Parameter
+// JavaScript Program to Get the Dimensions of an Image
 
-function greet() {
-  return "Hello";
-}
+const img = new Image();
 
-function name(user, func) {
-  const message = func();
+img.src = "//cdn.programiz.com/sites/tutorial2program/files/cover-artwork.png";
 
-  console.log(`${message} ${user}`);
-}
-
-name("John", greet());
-name("Jack", greet());
-name("Sara", greet());
+img.onload = function () {
+  console.log("width " + this.width);
+  console.log("height " + this.height);
+};
