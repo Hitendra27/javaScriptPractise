@@ -1,7 +1,9 @@
 // JavaScript Program to Remove All Whitespaces From a Text
 
-const string = "        Hello World          ";
+function trimString(x) {
+  const result = x.replace(/\s/g, "");
+  return result;
+}
 
-const resutl = string.split(" ").join("");
-
-console.log(resutl);
+const result = trimString("      Hello World       ");
+console.log(result);
