@@ -1,24 +1,7 @@
-// JavaScript Program to Write to Console
+// JavaScript Program to Convert Date to Number
 
-console.log(8);
+const d1 = new Date();
+console.log(d1);
 
-console.log("hello");
-
-const x = "hello";
-console.log(x);
-
-function sayName() {
-  return "Hello Sanj";
-}
-console.log(sayName());
-
-const name = "John";
-console.log("Hello " + name);
-console.log(`Hello ${name}`);
-
-let obj = {
-  name: "John",
-  age: 28,
-};
-
-console.log(obj);
+const result = d1.getTime();
+console.log(result);
