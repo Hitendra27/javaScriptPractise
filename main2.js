@@ -1,9 +1,24 @@
-// JavaScript Program to Remove All Whitespaces From a Text
+// JavaScript Program to Write to Console
 
-function trimString(x) {
-  const result = x.replace(/\s/g, "");
-  return result;
+console.log(8);
+
+console.log("hello");
+
+const x = "hello";
+console.log(x);
+
+function sayName() {
+  return "Hello Sanj";
 }
+console.log(sayName());
 
-const result = trimString("      Hello World       ");
-console.log(result);
+const name = "John";
+console.log("Hello " + name);
+console.log(`Hello ${name}`);
+
+let obj = {
+  name: "John",
+  age: 28,
+};
+
+console.log(obj);
