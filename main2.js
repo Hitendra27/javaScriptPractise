@@ -1,3 +1,8 @@
-// JavaScript Program To Print Hello World
+// JavaScript Program to Add Two Numbers
 
-document.write("Hello, World!");
+const num1 = 5;
+const num2 = 3;
+
+const sum = num1 + num2;
+
+console.log(`The sum of ${num1} and ${num2} is ${sum}`);
