@@ -1,11 +1,23 @@
-// JavaScript Program to Calculate the Area of a Triangle
+// Javascript Program to Solve Quadratic Equation
 
-const side1 = parseInt(prompt("Enter side1: "));
-const side2 = parseInt(prompt("Enter side2: "));
-const side3 = parseInt(prompt("Enter side3: "));
+let root1, root2;
 
-const s = (side1 + side2 + side3) / 2;
+let a = prompt("Enter the first number: ");
+let b = prompt("Enter the second number: ");
+let c = prompt("Enter the third number: ");
 
-const areaValue = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+let discriminant = b * b - 4 * a * c;
 
-console.log(`The area of the triangle is ${areaValue}`);
+if (discriminant > 0) {
+  root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+  root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+  console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+} else {
+  let realPart = (-b / (2 * a)).toFixed(2);
+  let imagePart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+
+  console.log(
+    `The roots of quadratic equation are ${realPart} + ${imagePart}i and ${realPart} - ${imagePart}i`
+  );
+}
