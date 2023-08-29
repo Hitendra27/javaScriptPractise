@@ -1,23 +1,13 @@
-// Javascript Program to Solve Quadratic Equation
+// JavaScript Program to Swap Two Variables
 
-let root1, root2;
+let a = prompt('Enter the first variable: ');
+let b = prompt('Enter the second variable: ');
 
-let a = prompt("Enter the first number: ");
-let b = prompt("Enter the second number: ");
-let c = prompt("Enter the third number: ");
+let temp;
 
-let discriminant = b * b - 4 * a * c;
+temp = a;
+a = b;
+b = temp;
 
-if (discriminant > 0) {
-  root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-  root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-
-  console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
-} else {
-  let realPart = (-b / (2 * a)).toFixed(2);
-  let imagePart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
-
-  console.log(
-    `The roots of quadratic equation are ${realPart} + ${imagePart}i and ${realPart} - ${imagePart}i`
-  );
-}
+console.log(`The value of a after swapping: ${a}`);
+console.log(`The value of b after swapping: ${b}`);
