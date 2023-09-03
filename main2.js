@@ -1,9 +1,9 @@
-// JavaScript Program to Convert Kilometers to Miles
+// JavaScript Program to Convert Miles to Kilometers
 
-const Kilometers = prompt('Enter value in kilometers: ');
+const miles = prompt("Enter value in miles: ");
 
 const factor = 0.621371;
 
-const miles = Kilometers * factor;
+const kilometers = miles / factor;
 
-console.log(`${Kilometers} kilometers is equal to ${miles} miles.`);
+console.log(`${miles} miles is equal to ${kilometers} kilometers.`);
