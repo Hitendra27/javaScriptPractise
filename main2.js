@@ -1,9 +1,7 @@
-// JavaScript Program to Convert Miles to Kilometers
+// Javascript Program to Convert Celsius to Fahrenheit
 
-const miles = prompt("Enter value in miles: ");
+const celsius = prompt('Enter a celsius value: ');
 
-const factor = 0.621371;
+const fahrenheit = (celsius * 1.8) + 32;
 
-const kilometers = miles / factor;
-
-console.log(`${miles} miles is equal to ${kilometers} kilometers.`);
+console.log(`${celsius} degress celsius is equal to ${fahrenheit} degree fahrenheit.`);
