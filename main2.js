@@ -1,7 +1,7 @@
 // JavaScript Program to Add Two Numbers
 
-const num1 = 5;
-const num2 = 3;
+const num1 = parseInt(prompt("Enter the first number "));
+const num2 = parseInt(prompt("Enter the second number "));
 
 const sum = num1 + num2;
 
