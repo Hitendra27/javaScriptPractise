@@ -1,8 +1,7 @@
-// JavaScript Program to Add Two Numbers
+// JavaScript Program to Find the Square Root
 
-const num1 = parseInt(prompt("Enter the first number "));
-const num2 = parseInt(prompt("Enter the second number "));
+const number = prompt('Enter the number: ');
 
-const sum = num1 + num2;
+const result = Math.sqrt(number);
 
-console.log(`The sum of ${num1} and ${num2} is: ${sum}`);
+console.log(`The square root of ${number} is ${result}`);
