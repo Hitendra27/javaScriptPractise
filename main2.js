@@ -1,11 +1,13 @@
-// JavaScript Program to Calculate the Area of a Triangle
+// JavaScript Program to Swap Two Variables
 
-const side1 = parseInt(prompt("Enter side1: "));
-const side2 = parseInt(prompt("Enter side2: "));
-const side3 = parseInt(prompt("Enter side3: "));
+let a = prompt("Enter the first variable: ");
+let b = prompt("Enter the second variable: ");
 
-const s = (side1 + side2 + side3) / 2;
+let temp;
 
-const areaValue = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+temp = a;
+a = b;
+b = temp;
 
-console.log(`The area of the triangle is ${areaValue}`);
+console.log(`The value of a after swapping is ${a}`);
+console.log(`The value of b after swapping is ${b}`);
