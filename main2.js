@@ -1,9 +1,9 @@
-// JavaScript Program to Swap Two Variables
+// JavaScript Program to Convert Miles to Kilometers
 
-let a = prompt("Enter the first variable: ");
-let b = prompt("Enter the second variable: ");
+const miles = prompt("Enter value in Miles: ");
 
-[a, b] = [b, a];
+const factor = 0.621371;
 
-console.log(`The value of a after swapping is ${a}`);
-console.log(`The value of b after swapping is ${b}`);
+const kilometers = miles / factor;
+
+console.log(`${miles} miles is equal to ${kilometers} kelometers`);
