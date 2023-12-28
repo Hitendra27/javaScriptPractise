@@ -1,7 +1,5 @@
-// Javascript Program to Convert Celsius to Fahrenheit
+// Javascript Program to Generate a Random Number
 
-const celsius = prompt("Enter a celsius value: ");
+const a = Math.random();
 
-const fahrenheit = (celsius * 1.8) + 32;
-
-console.log(`${celsius} degree celsius is equal to ${fahrenheit} degree fahrenheit.`);
+console.log(a);
