@@ -1,8 +1,16 @@
-// Javascript Program to Check if a Number is Odd or Even
+// JavaScript Program to Find the Largest Among Three Numbers
 
-let num = 45;
+const num1 = 45;
+const num2 = 88;
+const num3 = 77;
+let Largest;
 
-// ternary operator
-let checkNum = num % 2 == 0 ? `${num} is Even number` : `${num} is Odd number`;
+if (num1 >= num2 && num1 >= num3) {
+  Largest = num1;
+} else if (num2 >= num1 && num2 >= num3) {
+  Largest = num2;
+} else {
+  Largest = num3;
+}
 
-console.log(checkNum);
+console.log(`The largest number is: ${Largest}`);
