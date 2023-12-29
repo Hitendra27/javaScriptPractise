@@ -1,13 +1,9 @@
-// Javascript Program to Check if a number is Positive, Negative, or Zero
+// Javascript Program to Check if a Number is Odd or Even
 
-const number = 9;
+let num = 10;
 
-if (number >= 0) {
-  if (number == 0) {
-    console.log("The number is zero");
-  } else {
-    console.log("The number is positive");
-  }
+if (num % 2 == 0) {
+  console.log(`${num} is Even number`);
 } else {
-  console.log("The number is negative");
+  console.log(`${num} is Odd number`);
 }
