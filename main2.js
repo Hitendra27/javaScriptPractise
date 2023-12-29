@@ -1,9 +1,8 @@
 // Javascript Program to Check if a Number is Odd or Even
 
-let num = 10;
+let num = 45;
 
-if (num % 2 == 0) {
-  console.log(`${num} is Even number`);
-} else {
-  console.log(`${num} is Odd number`);
-}
+// ternary operator
+let checkNum = num % 2 == 0 ? `${num} is Even number` : `${num} is Odd number`;
+
+console.log(checkNum);
