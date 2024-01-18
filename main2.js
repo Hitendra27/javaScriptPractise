@@ -1,9 +1,21 @@
-// JavaScript Program to Find the Largest Among Three Numbers
+// loop practise
 
-const num1 = 96;
-const num2 = 88;
-const num3 = -53;
+// for loop
+// const animals = ["dog", "cat", "lion", "tiger", "rabbit"];
 
-let largest = Math.min(num1, num2, num3);
+// for (let i = 0; i < animals.length; i++) {
+//   console.log(animals[i].toUpperCase());
+// }
 
-console.log(`The largest number is: ${largest}`);
+// for Each
+
+const transport = [
+  "car",
+  "bike",
+  "tube",
+  "overground",
+  "national rail",
+  "buses",
+];
+
+transport.forEach((a) => console.log(a.toUpperCase()));
