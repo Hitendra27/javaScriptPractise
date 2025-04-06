@@ -1,51 +1,20 @@
-// Number Challenge
+// Array Challenges
+// Challenge 1:
 // Instructions:
 
-// Create a variable called x that is a random number between 1 and 100 along with a variable called y that is a random number between 1 and 50.
+// Use some of the array methods that we looked at to mutate the following array to = the expected result below:
 
-// Create a variable for the sum, difference, product, quotient and remainder of x and y. Log the output in a string that shows the two numbers of x and y along with the operator and result.
-
-// You can log the output string directly or put them in separate variables and log them like below.
-// You can use string concatenation or template literals for the output.
+// const arr = [1, 2, 3, 4, 5];
 // Expected Result:
 
-// console.log(sumOutput); // 31 + 15 = 46
-// console.log(differenceOutput); // 31 - 15 = 16
-// console.log(productOutput); // 31 * 15 = 465
-// console.log(quotientOutput); // 31 / 15 = 2.066666666666667
-// console.log(rmOutput); // 31 % 15 = 1
-// Hints:
+// console.log(arr);
+// // [6, 5, 4, 3, 2, 1, 0];
+// Hint: No hints. This one is pretty easy ;)
 
-// The Math.random() function returns a floating-point, pseudo-random number in the range 0 to less than 1
+const arr = [1, 2, 3, 4, 5];
 
-// The Math.floor() function will round a number down to the nearest integer
+arr.reverse().unshift(6);
 
-let x = Math.floor(Math.random() * 100) + 1;
+arr.push(0);
 
-let y = Math.floor(Math.random() * 50) + 1;
-
-// sum
-const sum = x + y;
-const sumOutput = `${x} + ${y} = ${sum}`;
-
-//cdifference
-const difference = x - y;
-const differenceOutput = `${x} - ${y} = ${difference}`;
-
-// product
-const product = x * y;
-const productOutput = `${x} * ${y} = ${product}`;
-
-// quotient
-const quotient = x / y;
-const quotientOutput = `${x} / ${y} = ${quotient}`;
-
-// rm
-const rm = x % y;
-const rmOutput = `${x} % ${y} = ${rm}`;
-
-console.log(sumOutput);
-console.log(differenceOutput);
-console.log(productOutput);
-console.log(quotientOutput);
-console.log(rmOutput);
+console.log(arr);
