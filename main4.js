@@ -34,7 +34,7 @@ library[0].status.read = true;
 library[1].status.read = true;
 library[2].status.read = true;
 
-const { title:firstBook } = library[0];
+const { title: firstBook } = library[0];
 
 updatedLibrary = JSON.stringify(library);
 
