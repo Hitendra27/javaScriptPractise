@@ -1,41 +1,23 @@
-let updatedLibrary;
+const getCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9;
 
-const library = [
-  {
-    title: "The Wiff of Money",
-    author: "James Hadley Chase",
-    status: {
-      own: true,
-      reading: false,
-      read: false,
-    },
-  },
-  {
-    title: "The Shining",
-    author: "Stephen King",
-    status: {
-      own: true,
-      reading: false,
-      read: false,
-    },
-  },
-  {
-    title: "One Shot",
-    author: "Lee Child",
-    status: {
-      own: true,
-      reading: false,
-      read: false,
-    },
-  },
-];
+//console.log(`The temperature is ${getCelsius(100)} \xB0C`);
 
-library[0].status.read = true;
-library[1].status.read = true;
-library[2].status.read = true;
+const minMax = (arr) => {
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
 
-const { title: firstBook } = library[0];
+  return {
+    min,
+    max,
+  };
+};
 
-updatedLibrary = JSON.stringify(library);
+//console.log(minMax([1, 2, 3, 4, 5]));
 
-console.log(updatedLibrary);
+((length, width) => {
+  const area = length * width;
+
+  const output = `The area of a rectangle with a length of ${length} and a width of ${width} is ${area}.`;
+
+  console.log(output);
+})(10, 5);
