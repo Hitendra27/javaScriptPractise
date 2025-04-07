@@ -1,3 +1,5 @@
+let updatedLibrary;
+
 const library = [
   {
     title: "The Wiff of Money",
@@ -28,36 +30,12 @@ const library = [
   },
 ];
 
-//console.log(library);
+library[0].status.read = true;
+library[1].status.read = true;
+library[2].status.read = true;
 
-const movies = [
-  {
-    title: "Fight Club",
-    director: "David Fincher",
-    status: {
-      own: true,
-      reading: false,
-      read: false,
-    },
-  },
-  {
-    title: "The Matrix",
-    director: "The Wachowski Brothers",
-    status: {
-      own: true,
-      reading: false,
-      read: false,
-    },
-  },
-  {
-    title: "Inception",
-    director: "Christoper Nolan",
-    status: {
-      own: true,
-      reading: false,
-      read: false,
-    },
-  },
-];
+const { title:firstBook } = library[0];
 
-console.log(movies);
+updatedLibrary = JSON.stringify(library);
+
+console.log(updatedLibrary);
