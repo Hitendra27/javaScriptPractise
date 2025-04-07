@@ -7,8 +7,8 @@ const library = [
       reading: false,
       read: false,
     },
-},
-{
+  },
+  {
     title: "The Shining",
     author: "Stephen King",
     status: {
@@ -16,8 +16,8 @@ const library = [
       reading: false,
       read: false,
     },
-},
-{
+  },
+  {
     title: "One Shot",
     author: "Lee Child",
     status: {
@@ -28,4 +28,36 @@ const library = [
   },
 ];
 
-console.log(library);
+//console.log(library);
+
+const movies = [
+  {
+    title: "Fight Club",
+    director: "David Fincher",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+  {
+    title: "The Matrix",
+    director: "The Wachowski Brothers",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+  {
+    title: "Inception",
+    director: "Christoper Nolan",
+    status: {
+      own: true,
+      reading: false,
+      read: false,
+    },
+  },
+];
+
+console.log(movies);
