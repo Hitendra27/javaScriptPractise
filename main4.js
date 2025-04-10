@@ -1,5 +1,5 @@
-const numbers = [2, -30, 50, 20, -12, -9, 7];
+const words = ["coder", "programmer", "developer"];
 
-const positiveSum = numbers.filter((a) => a >= 0).reduce((a, b) => a + b, 0);
+const capitalizeWords = words.map((a) => a[0].toUpperCase() + a.slice(1, a.length));
 
-console.log(positiveSum);
+console.log(capitalizeWords);
