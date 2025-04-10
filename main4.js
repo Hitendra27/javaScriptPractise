@@ -1,23 +1,49 @@
-const getCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9;
+// Higher Order Challenges with Traversy Media
+const people = [
+  {
+    firstName: "John",
+    lastName: "Doe",
+    email: "john@gmail.com",
+    phone: "111-111-1111",
+    age: 30,
+  },
+  {
+    firstName: "Jane",
+    lastName: "Poe",
+    email: "jane@gmail.com",
+    phone: "222-222-2222",
+    age: 25,
+  },
+  {
+    firstName: "Bob",
+    lastName: "Foe",
+    email: "bob@gmail.com",
+    phone: "333-333-3333",
+    age: 45,
+  },
+  {
+    firstName: "Sara",
+    lastName: "Soe",
+    email: "Sara@gmail.com",
+    phone: "444-444-4444",
+    age: 19,
+  },
+  {
+    firstName: "Jose",
+    lastName: "Koe",
+    email: "jose@gmail.com",
+    phone: "555-555-5555",
+    age: 23,
+  },
+];
 
-//console.log(`The temperature is ${getCelsius(100)} \xB0C`);
+const youngPeople = people
+  .filter((a) => a.age <= 25)
+  .map((b) => {
+    return {
+      name: `${b.firstName} ${b.lastName}`,
+      email: b.email,
+    };
+  });
 
-const minMax = (arr) => {
-  const min = Math.min(...arr);
-  const max = Math.max(...arr);
-
-  return {
-    min,
-    max,
-  };
-};
-
-//console.log(minMax([1, 2, 3, 4, 5]));
-
-((length, width) => {
-  const area = length * width;
-
-  const output = `The area of a rectangle with a length of ${length} and a width of ${width} is ${area}.`;
-
-  console.log(output);
-})(10, 5);
+console.log(youngPeople);
